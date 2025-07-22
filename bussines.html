@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nisa's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    @font-face {
+  font-family: 'brydan';
+  src: url('brydan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+    * {
+      box-sizing: border-box;
+      font-family: 'brydan', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: linear-gradient(to bottom, #ffffff, #ffffff);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+        
+  height: 40vh; /* atau 60vh di mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* opsional kalau ingin teks rata tengah */
+  flex-direction: column; /* kalau isi lebih dari satu elemen vertikal */
+      padding: 80px 20px;
+      height: 100vh;
+      justify-content: center;
+      text-align: center;
+      background: white;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    }
+    header h1 {
+      font-size: 3em;
+      color: #6a4e4e;
+    }
+    header p {
+      font-size: 1.7em;
+      color: #4d3d3d;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      padding: 40px;
+      margin-bottom: 30px;
+      border-radius: 24px;
+      /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      margin-bottom: 15px;
+      color: #4d3d3d;;
+      font-size: 1.8em;
+    }
+        .card p {
+
+      color: #4d3d3d;;
+      font-size: 1.2em;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+          margin-bottom: 100px;
+    }
+    .skill-box {
+      background-color: #ddd4d4;
+      padding: 12px 24px;
+      border-radius: 14px;
+      font-weight: 400;
+      color: #000000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .skill-box:hover {
+      background-color: #ada6a6;
+      transform: scale(1.05);
+    }
+
+    .project-container {
+      margin-top: 50px;
+    }
+    .project-container h2 {
+      margin-bottom: 15px;
+    }
+
+    .service-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .service-box {
+      flex: 1 1 calc(50% - 20px);
+      background: #eee8e8;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      text-align: center;
+
+    }
+    .service-box img {
+      width: 100%;
+      object-fit: contain;
+      margin-bottom: 15px;
+      /* box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1); */
+      border-radius: 10px;
+    }
+    .service-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    }
+    .service-box h3 {
+      margin-bottom: 12px;
+      color: #463737;
+    }
+    .service-box p {
+      flex-grow: 1;
+      margin-bottom: 18px;
+      color: #5a3d3d;
+      font-size: 1.1em;
+    }
+    .service-box button {
+      padding: 10px 16px;
+      background-color: #4d3d3d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .service-box button:hover {
+      background-color: #6e5858;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.95em;
+      background: #6a4e4e;
+      color: #ffffff;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+        .card{
+            padding: 5px;
+        }
+        .img-header{
+    width: 100%;
+    background-size: cover;
+}
+        header{
+            height: 30vh;
+        }
+      .service-box {
+        flex: 1 1 100%;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+    }
+    .btn-cta {
+  margin-top: 20px;
+  padding: 12px 40px;
+  background-color: #4d3d3d;
+  color: white;
+  text-decoration: none;
+  border-radius: 80px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #675151;;
+}
+
+.img-header{
+    width: 60%;
+    background-size: cover;
+}
+.social-buttons {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+  background:  #4d3d3d;
+}
+
+.tombol{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap:20px;
+}
+
+.social-btn:hover {
+  opacity: 0.8;
+}
+  </style>
+</head>
+<body>
+
+  <section>
+    <div class="card">
+  </div>
+    </div>
+      </div>
+    </div>
+
+    <div id="projects" class="card project-container">
+      <h2>Lets Explore my space</h2>
+
+       <p>A little collection of what I do — design, code, content, and everything in between.</p>
+      <div class="service-boxes">
+        <div class="service-box">
+          <img src="invlogo.png" alt="Design Icon">
+          
+          <p>I turn ideas into clean, thoughtful visuals — from logos to layouts, with a focus on balance and style.</p>
+          <div class="tombol">
+                    <a href="website.html">
+  <button><i class="fab fa-instagram"></i>  Instagram</button>
+</a>
+                <a href="website.html">
+  <button><i class="fab fa-tiktok"></i>  tiktok</button>
+</a></div>
+      
+        </div>
+        <div class="service-box">
+          <img src="planerez.png" alt="Frontend Icon">
+          <p>I build simple, responsive websites that look good and work well — clean code, smooth experience, modern design.</p>
+                 <div class="tombol">
+                    <a href="website.html">
+  <button><i class="fab fa-instagram"></i>  Instagram</button>
+</a>
+                <a href="website.html">
+  <button><i class="fab fa-tiktok"></i>  tiktok</button>
+</a></div>
+        </div>
+        <div class="service-box">
+          <img src="numemories.png" alt="Business Icon">
+          <p>COMING SOON</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Nisa. Dibuat dengan hati 💕
+  </footer>
+</body>
+</html>
