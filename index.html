@@ -33,12 +33,7 @@
   text-align: center; /* opsional kalau ingin teks rata tengah */
   flex-direction: column; /* kalau isi lebih dari satu elemen vertikal */
       padding: 80px 20px;
-      height: 100vh;
-      justify-content: center;
-      text-align: center;
       background: white;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
       /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
     }
     header h1 {
@@ -171,24 +166,11 @@
       margin-top: 60px;
     }
 
-    @media (max-width: 768px) {
-        .card{
-            padding: 5px;
-        }
-        .img-header{
-    width: 100%;
+.img-header{
+    width: 60%;
     background-size: cover;
 }
-        header{
-            height: 50vh;
-        }
-      .service-box {
-        flex: 1 1 100%;
-      }
-      header h1 {
-        font-size: 2em;
-      }
-    }
+
     .btn-cta {
   margin-top: 20px;
   padding: 12px 40px;
@@ -198,16 +180,13 @@
   border-radius: 80px;
   font-weight: 600;
   transition: background-color 0.3s ease;
+   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 }
 
 .btn-cta:hover {
   background-color: #675151;;
 }
 
-.img-header{
-    width: 60%;
-    background-size: cover;
-}
 .social-buttons {
     margin-top: 50px;
     margin-bottom: 100px;
@@ -233,6 +212,27 @@
 .social-btn:hover {
   opacity: 0.8;
 }
+    @media (max-width: 768px) {
+        .card{
+            padding: 10px;
+        }
+        .img-header{
+    width: 100%;
+    background-size: cover;
+}
+        header{
+            height: 60vh;
+        }
+        .img-header{
+          width: 100vw;
+        }
+      .service-box {
+        flex: 1 1 100%;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -247,9 +247,8 @@
       <h2>👋 Hi I'm Annisa</h2>.
       <p> I'm A.. web developer, designer, content creator, business owner, A freelancer, Honestly, I’m not even sure anymore.
 I do a bit of everything — and I kinda like it that way.<br>
- I’m not exactly a “master” of just one thing, I like it that way. <br>
-Some people are specialists. Me? I’m a creative multitasker.
-And I’m okay with that — because that’s what makes me me.
+ I’m not exactly a “master” of just one thing, I like it that way.
+ — because that’s what makes me me.
 
 
 </p>
@@ -313,7 +312,7 @@ And I’m okay with that — because that’s what makes me me.
           <img src="bussines.svg" alt="Business Icon">
           <h3>BUSSINESS</h3>
           <p>I run my own brand — handling everything from design to delivery, while keeping things creative and consistent.</p>
-           <a href="website.html">
+           <a href="bussines.html">
   <button>View More</button>
 </a>
         </div>
